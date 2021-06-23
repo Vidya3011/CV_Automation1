@@ -1,8 +1,12 @@
 package Pom;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.Reporter;
 
 public class CreateNode {
 	@FindBy(id="createNodeAnchorForCabinet")
@@ -33,12 +37,18 @@ public class CreateNode {
 	@FindBy(id="createDocuemntNavigator")
     private WebElement NavTree;
 	
+	public WebDriver driver;
+	Actions action ;
+	public CreateNode(WebDriver driver) {
+		PageFactory.initElements(driver,this);
+	}
 	
 	public void CreateDrawerFolder(String CabinetName,String DrawerName,String FolderName) throws InterruptedException
 	 {
-		  WebElement Cabinet = driver.findElement(By.xpath(".//*[@id='viewDocumentnavigator']/ul/li/a"));
+		
+		WebElement Cabinet = driver.findElement(By.xpath(".//*[@id='viewDocumentnavigator']/ul/li/a"));
 		  
-		  System.out.println("Cabinet::"+Cabinet.getText());
+		  Reporter.log("Cabinet::"+Cabinet.getText(),true);
 		  //Cabinet.click();
 		  action.click(Cabinet).build().perform();
 		  Thread.sleep(2000);
@@ -53,7 +63,7 @@ public class CreateNode {
 		  }
 		  }
 		  catch(Exception e){
-			  System.out.println("Create cabinet permission denied");
+			 Reporter.log("Create cabinet permission denied",true);
 		  }
 		  
 		  action.moveToElement(RoomName).build().perform();

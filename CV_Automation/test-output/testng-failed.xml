@@ -1,12 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" parallel="classes" name="ChromeTest(failed)">
+<suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="ChromeTest(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
+      <class name="Script.NodeCreation">
+        <methods>
+          <include name="CloseApplication"/>
+          <include name="testCreateNode"/>
+          <include name="beforeTest"/>
+        </methods>
+      </class> <!-- Script.NodeCreation -->
       <class name="Script.ValidLogin">
         <methods>
           <include name="testValidLogin"/>
+          <include name="CloseApplication"/>
           <include name="beforeTest"/>
         </methods>
       </class> <!-- Script.ValidLogin -->

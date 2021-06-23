@@ -1,94 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="0" failed="2" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Username:vidya]]>
     </line>
     <line>
-      <![CDATA[Username:vidy]]>
-    </line>
-    <line>
-      <![CDATA[Password:syntax@10]]>
-    </line>
-    <line>
       <![CDATA[Password:syntax@10]]>
     </line>
     <line>
       <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
     </line>
     <line>
-      <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
+      <![CDATA[Cabinet:New Cabinet]]>
     </line>
     <line>
-      <![CDATA[Remember me checkbox is selected]]>
+      <![CDATA[Drawer:New Drawer]]>
     </line>
     <line>
-      <![CDATA[Remember me checkbox is selected]]>
-    </line>
-    <line>
-      <![CDATA[pass:Error message is Displayed]]>
-    </line>
-    <line>
-      <![CDATA[Username: ]]>
-    </line>
-    <line>
-      <![CDATA[Password:syntax@10]]>
-    </line>
-    <line>
-      <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
-    </line>
-    <line>
-      <![CDATA[Remember me checkbox is not selected]]>
-    </line>
-    <line>
-      <![CDATA[pass:Error message is Displayed]]>
-    </line>
-    <line>
-      <![CDATA[Username: ]]>
-    </line>
-    <line>
-      <![CDATA[Password: ]]>
-    </line>
-    <line>
-      <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
-    </line>
-    <line>
-      <![CDATA[Remember me checkbox is selected]]>
-    </line>
-    <line>
-      <![CDATA[Username: ]]>
-    </line>
-    <line>
-      <![CDATA[Password:]]>
-    </line>
-    <line>
-      <![CDATA[Room: ]]>
-    </line>
-    <line>
-      <![CDATA[pass:Error message is Displayed]]>
-    </line>
-    <line>
-      <![CDATA[Username:vidya]]>
-    </line>
-    <line>
-      <![CDATA[Password:syntax10]]>
-    </line>
-    <line>
-      <![CDATA[Room: ]]>
-    </line>
-    <line>
-      <![CDATA[Remember me checkbox is not selected]]>
-    </line>
-    <line>
-      <![CDATA[pass:Error message is Displayed]]>
+      <![CDATA[Folder:New Folder]]>
     </line>
   </reporter-output>
-  <suite started-at="2021-06-22T18:34:39 IST" name="Suite" finished-at="2021-06-22T18:35:10 IST" duration-ms="30891">
+  <suite started-at="2021-06-23T12:32:53 IST" name="Suite" finished-at="2021-06-23T12:33:09 IST" duration-ms="15999">
     <groups>
     </groups>
-    <test started-at="2021-06-22T18:34:39 IST" name="ChromeTest" finished-at="2021-06-22T18:35:10 IST" duration-ms="30891">
+    <test started-at="2021-06-23T12:32:53 IST" name="ChromeTest" finished-at="2021-06-23T12:33:09 IST" duration-ms="15999">
       <class name="Script.ValidLogin">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:Script.ValidLogin@1a18644]" started-at="2021-06-22T18:34:39 IST" name="beforeTest" finished-at="2021-06-22T18:34:44 IST" duration-ms="5219" status="PASS">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:Script.ValidLogin@614ca7df]" started-at="2021-06-23T12:32:53 IST" name="beforeTest" finished-at="2021-06-23T12:33:02 IST" duration-ms="8773" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,29 +36,25 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="testValidLogin()[pri:1, instance:Script.ValidLogin@1a18644]" started-at="2021-06-22T18:34:44 IST" name="testValidLogin" finished-at="2021-06-22T18:35:10 IST" duration-ms="25643" status="FAIL">
-          <exception class="org.openqa.selenium.NoSuchElementException">
+        <test-method signature="testValidLogin()[pri:1, instance:Script.ValidLogin@614ca7df]" started-at="2021-06-23T12:33:02 IST" name="testValidLogin" finished-at="2021-06-23T12:33:04 IST" duration-ms="1965" status="FAIL">
+          <exception class="org.openqa.selenium.ElementClickInterceptedException">
             <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"css selector","selector":"#rooms"}
+              <![CDATA[element click intercepted: Element <input class="custom-control-input" type="checkbox" id="check1" name="loginCheckbox"> is not clickable at point (591, 444). Other element would receive the click: <label class="custom-control-label" for="check1">...</label>
   (Session info: chrome=91.0.4472.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'SYNTAXBTM144', ip: '10.4.8.144', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\vidya.h\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50896}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: de19242f9d14b26810a169cf9c3f8d0f
-*** Element info: {Using=id, value=rooms}]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\vidya.h\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49422}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c0c18ca752ea1f0d420f1a9032280594]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":"#rooms"}
+              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <input class="custom-control-input" type="checkbox" id="check1" name="loginCheckbox"> is not clickable at point (591, 444). Other element would receive the click: <label class="custom-control-label" for="check1">...</label>
   (Session info: chrome=91.0.4472.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:53'
 System info: host: 'SYNTAXBTM144', ip: '10.4.8.144', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '15.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\vidya.h\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50896}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: de19242f9d14b26810a169cf9c3f8d0f
-*** Element info: {Using=id, value=rooms}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\vidya.h\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49422}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c0c18ca752ea1f0d420f1a9032280594
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -133,16 +66,16 @@ at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCo
 at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-at org.openqa.selenium.By$ById.findElement(By.java:188)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy12.getTagName(Unknown Source)
-at org.openqa.selenium.support.ui.Select.<init>(Select.java:45)
-at Pom.LoginPage.<init>(LoginPage.java:59)
-at Script.ValidLogin.testValidLogin(ValidLogin.java:21)
+at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+at com.sun.proxy.$Proxy13.click(Unknown Source)
+at Pom.LoginPage.CheckRememberMe(LoginPage.java:121)
+at Script.ValidLogin.testValidLogin(ValidLogin.java:25)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -155,12 +88,25 @@ at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java
 at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
 at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
 at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-at java.base/java.lang.Thread.run(Thread.java:832)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
+          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
             <line>
               <![CDATA[Username:vidya]]>
@@ -171,23 +117,15 @@ at java.base/java.lang.Thread.run(Thread.java:832)
             <line>
               <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
             </line>
-            <line>
-              <![CDATA[Remember me checkbox is selected]]>
-            </line>
-            <line>
-              <![CDATA[Username: ]]>
-            </line>
-            <line>
-              <![CDATA[Password:]]>
-            </line>
-            <line>
-              <![CDATA[Room: ]]>
-            </line>
           </reporter-output>
         </test-method> <!-- testValidLogin -->
+        <test-method is-config="true" signature="CloseApplication()[pri:0, instance:Script.ValidLogin@614ca7df]" started-at="2021-06-23T12:33:04 IST" name="CloseApplication" finished-at="2021-06-23T12:33:04 IST" duration-ms="184" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApplication -->
       </class> <!-- Script.ValidLogin -->
-      <class name="Script.InvalidLogin">
-        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:Script.InvalidLogin@18d87d80]" started-at="2021-06-22T18:34:39 IST" name="beforeTest" finished-at="2021-06-22T18:34:44 IST" duration-ms="5296" status="PASS">
+      <class name="Script.NodeCreation">
+        <test-method is-config="true" signature="beforeTest(java.lang.String)[pri:0, instance:Script.NodeCreation@f5acb9d]" started-at="2021-06-23T12:33:04 IST" name="beforeTest" finished-at="2021-06-23T12:33:09 IST" duration-ms="4771" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -198,71 +136,63 @@ at java.base/java.lang.Thread.run(Thread.java:832)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeTest -->
-        <test-method signature="testInvalidLogin()[pri:2, instance:Script.InvalidLogin@18d87d80]" started-at="2021-06-22T18:34:44 IST" name="testInvalidLogin" finished-at="2021-06-22T18:35:04 IST" duration-ms="19714" status="PASS">
+        <test-method signature="testCreateNode()[pri:3, instance:Script.NodeCreation@f5acb9d]" started-at="2021-06-23T12:33:09 IST" name="testCreateNode" finished-at="2021-06-23T12:33:09 IST" duration-ms="97" status="FAIL">
+          <exception class="java.lang.NullPointerException">
+            <message>
+              <![CDATA[Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)" because "this.driver" is null
+at Pom.CreateNode.CreateDrawerFolder(CreateNode.java:48)
+at Script.NodeCreation.testCreateNode(NodeCreation.java:27)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64)
+at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+at java.base/java.lang.reflect.Method.invoke(Method.java:564)
+at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:133)
+at org.testng.internal.TestInvoker.invokeMethod(TestInvoker.java:598)
+at org.testng.internal.TestInvoker.invokeTestMethod(TestInvoker.java:173)
+at org.testng.internal.MethodRunner.runInSequence(MethodRunner.java:46)
+at org.testng.internal.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:824)
+at org.testng.internal.TestInvoker.invokeTestMethods(TestInvoker.java:146)
+at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:146)
+at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:128)
+at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+at org.testng.TestRunner.privateRun(TestRunner.java:794)
+at org.testng.TestRunner.run(TestRunner.java:596)
+at org.testng.SuiteRunner.runTest(SuiteRunner.java:377)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:371)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:332)
+at org.testng.SuiteRunner.run(SuiteRunner.java:276)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:53)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:96)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1212)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1134)
+at org.testng.TestNG.runSuites(TestNG.java:1063)
+at org.testng.TestNG.run(TestNG.java:1031)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+]]>
+            </full-stacktrace>
+          </exception> <!-- java.lang.NullPointerException -->
           <reporter-output>
             <line>
-              <![CDATA[Username:vidy]]>
+              <![CDATA[Cabinet:New Cabinet]]>
             </line>
             <line>
-              <![CDATA[Password:syntax@10]]>
+              <![CDATA[Drawer:New Drawer]]>
             </line>
             <line>
-              <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
-            </line>
-            <line>
-              <![CDATA[Remember me checkbox is selected]]>
-            </line>
-            <line>
-              <![CDATA[pass:Error message is Displayed]]>
-            </line>
-            <line>
-              <![CDATA[Username: ]]>
-            </line>
-            <line>
-              <![CDATA[Password:syntax@10]]>
-            </line>
-            <line>
-              <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
-            </line>
-            <line>
-              <![CDATA[Remember me checkbox is not selected]]>
-            </line>
-            <line>
-              <![CDATA[pass:Error message is Displayed]]>
-            </line>
-            <line>
-              <![CDATA[Username: ]]>
-            </line>
-            <line>
-              <![CDATA[Password: ]]>
-            </line>
-            <line>
-              <![CDATA[Room:Win2019Server.Window2019_CV2021]]>
-            </line>
-            <line>
-              <![CDATA[Remember me checkbox is selected]]>
-            </line>
-            <line>
-              <![CDATA[pass:Error message is Displayed]]>
-            </line>
-            <line>
-              <![CDATA[Username:vidya]]>
-            </line>
-            <line>
-              <![CDATA[Password:syntax10]]>
-            </line>
-            <line>
-              <![CDATA[Room: ]]>
-            </line>
-            <line>
-              <![CDATA[Remember me checkbox is not selected]]>
-            </line>
-            <line>
-              <![CDATA[pass:Error message is Displayed]]>
+              <![CDATA[Folder:New Folder]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testInvalidLogin -->
-      </class> <!-- Script.InvalidLogin -->
+        </test-method> <!-- testCreateNode -->
+        <test-method is-config="true" signature="CloseApplication()[pri:0, instance:Script.NodeCreation@f5acb9d]" started-at="2021-06-23T12:33:09 IST" name="CloseApplication" finished-at="2021-06-23T12:33:09 IST" duration-ms="179" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CloseApplication -->
+      </class> <!-- Script.NodeCreation -->
     </test> <!-- ChromeTest -->
   </suite> <!-- Suite -->
 </testng-results>

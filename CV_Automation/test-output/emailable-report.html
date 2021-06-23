@@ -9,39 +9,35 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Suite</th></tr>
-<tr><td><a href="#t0">ChromeTest</a></td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">30,891</td><td></td><td></td></tr>
+<tr><td><a href="#t0">ChromeTest</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num attn">2</td><td class="num">15,999</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Script.ValidLogin</td><td><a href="#m0">testValidLogin</a></td><td rowspan="1">1624367084842</td><td rowspan="1">25643</td></tr><tr><th colspan="4">ChromeTest &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">Script.InvalidLogin</td><td><a href="#m1">testInvalidLogin</a></td><td rowspan="1">1624367084912</td><td rowspan="1">19714</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">ChromeTest &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">Script.NodeCreation</td><td><a href="#m0">testCreateNode</a></td><td rowspan="1">1624431789535</td><td rowspan="1">97</td></tr><tr class="failedodd"><td rowspan="1">Script.ValidLogin</td><td><a href="#m1">testValidLogin</a></td><td rowspan="1">1624431782609</td><td rowspan="1">1965</td></tr></tbody>
 </table>
-<h2>ChromeTest</h2><h3 id="m0">Script.ValidLogin#testValidLogin</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Username:vidya<br/>Password:syntax@10<br/>Room:Win2019Server.Window2019_CV2021<br/>Remember me checkbox is selected<br/>Username: <br/>Password:<br/>Room: </div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;#rooms&quot;}
+<h2>ChromeTest</h2><h3 id="m0">Script.NodeCreation#testCreateNode</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Cabinet:New Cabinet<br/>Drawer:New Drawer<br/>Folder:New Folder</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.NullPointerException: Cannot invoke &quot;org.openqa.selenium.WebDriver.findElement(org.openqa.selenium.By)&quot; because &quot;this.driver&quot; is null
+	at Pom.CreateNode.CreateDrawerFolder(CreateNode.java:48)
+	at Script.NodeCreation.testCreateNode(NodeCreation.java:27)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 27 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">Script.ValidLogin#testValidLogin</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Username:vidya<br/>Password:syntax@10<br/>Room:Win2019Server.Window2019_CV2021</div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;input class=&quot;custom-control-input&quot; type=&quot;checkbox&quot; id=&quot;check1&quot; name=&quot;loginCheckbox&quot;&gt; is not clickable at point (591, 444). Other element would receive the click: &lt;label class=&quot;custom-control-label&quot; for=&quot;check1&quot;&gt;...&lt;/label&gt;
   (Session info: chrome=91.0.4472.114)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:25:53&apos;
 System info: host: &apos;SYNTAXBTM144&apos;, ip: &apos;10.4.8.144&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;15.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\vidya.h\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:50896}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: de19242f9d14b26810a169cf9c3f8d0f
-*** Element info: {Using=id, value=rooms}
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 91.0.4472.114, chrome: {chromedriverVersion: 90.0.4430.24 (4c6d850f087da..., userDataDir: C:\Users\vidya.h\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:49422}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c0c18ca752ea1f0d420f1a9032280594
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
 	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)
-	at org.openqa.selenium.By$ById.findElement(By.java:188)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy12.getTagName(Unknown Source)
-	at org.openqa.selenium.support.ui.Select.&lt;init&gt;(Select.java:45)
-	at Pom.LoginPage.&lt;init&gt;(LoginPage.java:59)
-	at Script.ValidLogin.testValidLogin(ValidLogin.java:21)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1130)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630)
-	at java.base/java.lang.Thread.run(Thread.java:832)
-... Removed 17 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">Script.InvalidLogin#testInvalidLogin</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Username:vidy<br/>Password:syntax@10<br/>Room:Win2019Server.Window2019_CV2021<br/>Remember me checkbox is selected<br/>pass:Error message is Displayed<br/>Username: <br/>Password:syntax@10<br/>Room:Win2019Server.Window2019_CV2021<br/>Remember me checkbox is not selected<br/>pass:Error message is Displayed<br/>Username: <br/>Password: <br/>Room:Win2019Server.Window2019_CV2021<br/>Remember me checkbox is selected<br/>pass:Error message is Displayed<br/>Username:vidya<br/>Password:syntax10<br/>Room: <br/>Remember me checkbox is not selected<br/>pass:Error message is Displayed</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at com.sun.proxy.$Proxy13.click(Unknown Source)
+	at Pom.LoginPage.CheckRememberMe(LoginPage.java:121)
+	at Script.ValidLogin.testValidLogin(ValidLogin.java:25)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 36 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
