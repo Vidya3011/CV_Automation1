@@ -64,7 +64,8 @@ public class CreateNode {
 		
 		//action.click(ExistingCabinet).build().perform();
 		Reporter.log("ExistingCabinet::" + ExistingCabinet.getText(),true);
-		ExistingCabinet.click();
+		
+		//ExistingCabinet.click();
 		Reporter.log("Existing cabinet is selected",true);
 		Thread.sleep(2000);
 		action.moveToElement(RoomName).build().perform();

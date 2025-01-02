@@ -6,7 +6,7 @@
   <test name="Test1"> 
 		<parameter name="browser" value="chrome" /> 
  		 <classes> 
-      <class name="Scripts.ValidLogin"/>      
+      <class name="Scripts.NewTestDocuments"/>      
     </classes>    
     </test> 
     

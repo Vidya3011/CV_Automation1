@@ -30,11 +30,30 @@ public class RecentDoc extends BaseTest {
 	    rec.SetRecentDocument();
 	    Thread.sleep(3000);
 	    ViewerToolbar view = new ViewerToolbar(driver);
+view.SetFullScreen();
+view.SetComments();
+Thread.sleep(2000);
+view.SetCopyPaste();
+Thread.sleep(2000);
+view.SetDeletePage();
+Thread.sleep(2000);
+view.SetSavePage();
+Thread.sleep(3000);
+view.setConvToPDF();
+Thread.sleep(8000);
+
+view.DownloadAllPages();
+
+Thread.sleep(5000);
+
+view.DownloadFirstPage();
+Thread.sleep(3000);
 
 		view.SetCloseViewer();
-		/*
-		 * LogoutPage logout=new LogoutPage(driver); logout.testLogout();
-		 */
+		Thread.sleep(3000);
+//		LogoutPage logout=new LogoutPage(driver);
+//		logout.testLogout();
+		 
 	
 	}
 

@@ -89,7 +89,10 @@ public class NewDocument {
 	@FindBy(xpath = ("//select[@id='docTypeList']"))
 	private WebElement DocTypeList;
 
-	@FindBy(xpath = ("//input[@id='indices_5']"))
+	
+	
+	//@FindBy(xpath = ("//*[@id=\"docTypeIndicesTable\"]/tbody/tr/td[2]/input"))
+	@FindBy(xpath = ("//input[@id='indices_21'"))
 	private WebElement IndexValuetextbox;
 
 	@FindBy(xpath = ("//*[@id='createDocuemtnLocation']"))
@@ -275,7 +278,7 @@ public class NewDocument {
 		Reporter.log("Pages are uploaded successfully", true);
 
 		// Wait for Alert to be present
-		Thread.sleep(5000);
+		Thread.sleep(2000);
 try {
 		Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
  Alert alert = driver.switchTo().alert();
@@ -284,8 +287,10 @@ try {
 	myAlert.accept();
 }
 catch(Exception e) {
-	Reporter.log("Alert is not present",true);
+	Reporter.log("Alert is not present", true);
 }
+
+
 	}
 
 	public void SetDocType(String Documenttypename, String IndexVal) {
@@ -296,32 +301,47 @@ catch(Exception e) {
 
 		Reporter.log("document type is selected", true);
 		
-//		WebElement element1 = driver.findElement(By.xpath("//input[@id='indices_33']"));
-//		((JavascriptExecutor) driver).executeScript("arguments[0].removeAttribute('style')", element);
-//		element1.sendKeys(IndexVal);
-		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='indices_5']")));
-		IndexValuetextbox.sendKeys(IndexVal);
+		WebElement element1 = driver.findElement(By.xpath("//input[@id='indices_21']"));
+		((JavascriptExecutor) driver).executeScript("arguments[0].removeAttribute('style')", element1);
+		element1.sendKeys(IndexVal);
+//		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
+//		wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//input[@id='indices_21']")));
+//		IndexValuetextbox.sendKeys(IndexVal);
 		Reporter.log("Index value is:" + IndexVal, true);
 	}
 
 	public void SetClickCreateButton() throws InterruptedException {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		CreateButton.click();
 		try {
-			wait.until(ExpectedConditions.elementToBeClickable((CreateButton)));
-			WebElement element = driver.findElement(By.xpath("//*[@id='messageContent']"));
-		
-WebElement Repname= driver.findElement(By.xpath("//*[@id='messageButtonOK']"));
-	 WebElement Repnamedialog= driver.findElement(By.xpath("//*[@id='messageContent']"));
-	if(Repnamedialog.isDisplayed()) {
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", Repname);
-			
-			Reporter.log("Create Button is clicked ", true);
+			Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
+	 Alert alert = driver.switchTo().alert();
+
+			Thread.sleep(2000);
+		myAlert.accept();
 	}
-		} catch (Exception e) {
-			Reporter.log("Create Button is not clicked ", true);
-		}
+	catch(Exception e) {
+		Reporter.log("Alert is not present", true);
+	}
+
+			
+		
+		WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(CreateButton));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element1);
+		//CreateButton.click();
+//		try {
+//			wait.until(ExpectedConditions.elementToBeClickable((CreateButton)));
+//			WebElement element = driver.findElement(By.xpath("//*[@id='messageContent']"));
+//		
+//WebElement Repname= driver.findElement(By.xpath("//*[@id='messageButtonOK']"));
+//	 WebElement Repnamedialog= driver.findElement(By.xpath("//*[@id='messageContent']"));
+//	if(Repnamedialog.isDisplayed()) {
+//		((JavascriptExecutor)driver).executeScript("arguments[0].click();", Repname);
+//			
+//			Reporter.log("Create Button is clicked ", true);
+//	}
+//		} catch (Exception e) {
+//			Reporter.log("Create Button is not clicked ", true);
+//		}
 
 			 
 		
@@ -371,23 +391,39 @@ WebElement Repname= driver.findElement(By.xpath("//*[@id='messageButtonOK']"));
 
 	public void SetClickCreateNavigatebutton() throws Exception {
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		CreateButton.click();
 		try {
-			wait.until(ExpectedConditions.elementToBeClickable((CreateButton)));
-			WebElement element = driver.findElement(By.xpath("//*[@id='messageContent']"));
-			
-			WebElement Repname= driver.findElement(By.xpath("//*[@id='messageButtonOK']"));
-				 WebElement Repnamedialog= driver.findElement(By.xpath("//*[@id='messageContent']"));
-				if(Repnamedialog.isDisplayed()) {
-					((JavascriptExecutor)driver).executeScript("arguments[0].click();", Repname);
-						
-			Reporter.log("Create Button is clicked ", true);
-				}
-		} catch (Exception e) {
-			Reporter.log("Create Button is not clicked ", true);
-		}
+			Alert myAlert = wait.until(ExpectedConditions.alertIsPresent());
+	 Alert alert = driver.switchTo().alert();
+
+			Thread.sleep(2000);
+		myAlert.accept();
+	}
+	catch(Exception e) {
+		Reporter.log("Alert is not present", true);
+	}
+		WebElement Create  = wait.until(ExpectedConditions.elementToBeClickable(CreateButton));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", Create);
+		//CreateButton.click();
+//		try {
+//			
+//			wait.until(ExpectedConditions.elementToBeClickable((CreateButton)));
+//			WebElement element = driver.findElement(By.xpath("//*[@id='messageContent']"));
+//			
+//			WebElement Repname= driver.findElement(By.xpath("//*[@id='messageButtonOK']"));
+//				 WebElement Repnamedialog= driver.findElement(By.xpath("//*[@id='messageContent']"));
+//				if(Repnamedialog.isDisplayed()) {
+//					((JavascriptExecutor)driver).executeScript("arguments[0].click();", Repname);
+//						
+//			Reporter.log("Create Button is clicked ", true);
+//				}
+//		} catch (Exception e) {
+//			Reporter.log("Create Button is not clicked ", true);
+//		}
 		Thread.sleep(2000);
-		NavigateButton.click();
+		
+		WebElement navigate  = wait.until(ExpectedConditions.elementToBeClickable(NavigateButton));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", navigate);
+		//NavigateButton.click();
 		Reporter.log("Navigate Button is clicked ", true);
 
 	}
@@ -395,11 +431,11 @@ WebElement Repname= driver.findElement(By.xpath("//*[@id='messageButtonOK']"));
 	public void SetRependoc()throws Exception {
 	
 		WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
-		/*WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(ReopenTheDocument));
-		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element1);*/
+		WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(ReopenTheDocument));
+		((JavascriptExecutor)driver).executeScript("arguments[0].click();", element1);
 		Thread.sleep(5000);
 		
-		Thread.sleep(5000);
+		
 		try {
 		action.moveToElement(AddFileicon).perform();
 		Thread.sleep(3000);

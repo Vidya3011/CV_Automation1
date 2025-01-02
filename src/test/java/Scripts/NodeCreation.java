@@ -25,7 +25,7 @@ public class NodeCreation {
 	}
 
 	// @Test(dependsOnMethods = { "ValidLogin" })
-	 @Test(priority=3)
+	 @Test
 	public void testCreateNode() throws Exception {
 		String xlpath = IAutoConst.xlpath;
 		int rc = Lib.getRowCount(xlpath, "CreateNode");

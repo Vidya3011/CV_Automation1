@@ -4,8 +4,10 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -641,6 +643,14 @@ public class ViewerToolbar {
 	
 		 WebElement element1 = wait.until(ExpectedConditions.elementToBeClickable(DownloadYes)); 
 			((JavascriptExecutor)driver).executeScript("arguments[0].click();", element1);
+			
+			try {
+			    Alert alert = driver.switchTo().alert();
+			    alert.accept();  // Accept the alert
+			} catch (NoAlertPresentException e) {
+			    // No alert present
+			    System.out.println("No alert found!");
+			}
 		
 	}
 	public void DownloadFirstPage() {
